@@ -1,0 +1,5 @@
+kubectl delete -f frontend-deployment.yaml -n microservices-app
+kubectl delete -f backend-deployment.yaml -n microservices-app
+kubectl delete -f ingress.yaml -n microservices-app
+kubectl delete -f configmap.yaml -n microservices-app
+kubectl delete -f namespace.yaml
