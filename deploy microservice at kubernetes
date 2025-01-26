@@ -1,0 +1,19 @@
+#Create the Namespace 
+kubectl apply -f namespace.yaml
+
+#Deploy the Frontend and Backend Services:
+kubectl apply -f frontend-deployment.yaml -n microservices-app
+kubectl apply -f backend-deployment.yaml -n microservices-app
+
+#Apply the ConfigMap
+kubectl apply -f configmap.yaml -n microservices-app
+
+#Apply the Ingress Resource
+kubectl apply -f ingress.yaml -n microservices-app
+
+#Verify the Deployment:
+kubectl get pods -n microservices-app
+kubectl get svc -n microservices-app
+kubectl get ingress -n microservices-app
+
+
