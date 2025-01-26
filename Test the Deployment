@@ -1,0 +1,5 @@
+#Access the Services:
+kubectl get svc frontend-service -n microservices-app
+
+#Verify Logs:
+kubectl logs <pod-name> -n microservices-app
